@@ -1,0 +1,3 @@
+/home/xmz/RAYTRACE_piliang/CMakeFiles/main_program.dir
+/home/xmz/RAYTRACE_piliang/CMakeFiles/edit_cache.dir
+/home/xmz/RAYTRACE_piliang/CMakeFiles/rebuild_cache.dir
