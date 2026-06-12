@@ -1,0 +1,40 @@
+for i = 1:5 
+    tic;
+    [A, sortedjd, distance] = Get_A1_canshu_simple1(station, satellite, jdmin, jdmax, jdjg, wdmin, wdmax, wdjg, gdmin, gdmax, gdjg,total_length);
+    runTimes(i) = toc;
+    clear A sortedjd distance;
+end
+averageTime(1,1) = mean(runTimes);
+clear runTimes;
+for i = 1:5
+    tic;
+    [A, sortedjd, distance] = Get_A1_canshu_simple2(station, satellite, jdmin, jdmax, jdjg, wdmin, wdmax, wdjg, gdmin, gdmax, gdjg,total_length);
+    runTimes(i) = toc;
+    clear A sortedjd distance;
+end
+averageTime(1,2) = mean(runTimes);
+clear runTimes;
+for i = 1:5 
+    tic;
+    [A, sortedjd, distance] = Get_A1_trangle_simple11(station, satellite, jdmin, jdmax, jdjg, wdmin, wdmax, wdjg, gdmin, gdmax, gdjg,jdmin_rad,wdmin_rad,jdmax_rad,wdmax_rad,jdjg_rad,wdjg_rad,total_length,jd_grid,wd_grid,h_grid);
+    runTimes(i) = toc;
+    clear A sortedjd distance;
+end
+averageTime(1,3) = mean(runTimes);
+clear runTimes;
+for i = 1:5 
+    tic;
+    [A, sortedjd, distance] = Get_A1_trangle_simple2(station, satellite, jdmin, jdmax, jdjg, wdmin, wdmax, wdjg, gdmin, gdmax, gdjg,jdmin_rad,wdmin_rad,jdmax_rad,wdmax_rad,jdjg_rad,wdjg_rad,total_length,h_grid);
+    runTimes(i) = toc;
+    clear A sortedjd distance;
+end
+averageTime(1,4) = mean(runTimes);
+clear runTimes;
+for i = 1:5
+    tic;
+    [A1, sortedjd1, distance1] = Get_A1_trangle_simple31(station, satellite, jdmin, jdmax, jdjg, wdmin, wdmax, wdjg, gdmin, gdmax, gdjg,jdmin_rad,wdmin_rad,jdmax_rad,wdmax_rad,jdjg_rad,wdjg_rad,total_length,h_grid);
+    runTimes(i) = toc;
+    clear A sortedjd distance;
+end
+averageTime(1,5) = min(runTimes);
+clear runTimes;
