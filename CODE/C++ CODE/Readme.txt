@@ -1,6 +1,6 @@
 This file contains one algorithm for generating projection matrices：
 Midpoint Coordinate Index of a Line Segment:
-1.Spherical trigonometry + effective splitting surface scheme 2；	(main_functions_optimized.cpp)
+1.Spherical triangle method + fast intersection test scheme 2；	(main_functions_optimized.cpp)
 input : 
 	station.txt : station coordinates
 	satellite.txt : satellite coordinates
